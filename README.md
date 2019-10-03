@@ -24,75 +24,75 @@ By the end of this, developers should be able to:
 Let’s create a person in JavaScript.  We could use a variable and a string...
 
 ```js
-const person = "John Doe"
+const person = "John Doe";
 ```
 
 To print our person’s name we could do...
 
 ```js
-const person = "John Doe"
-console.log(person)
+const person = "John Doe";
+console.log(person);
 ```
 
 Well a person has more than a name so let’s add an age and eye color.  
 
 ```js
-const person = "John Doe"
-const age = 50
-const eyeColor = "Blue"
+const person = "John Doe";
+const age = 50;
+const eyeColor = "Blue";
 ```
 
 That data isn't grouped very well, they are all independent variables.  We could use an array...
 
 ```js
-const person = ["John Doe", 50, "Blue"]
+const person = ["John Doe", 50, "Blue"];
 ```
 
 To print our person’s name, age, and eye color we could do...
 
 ```js
-const person = ["John Doe", 150, "Blue"]
+const person = ["John Doe", 150, "Blue"];
 
-console.log(person[0]) // John Doe
+console.log(person[0]); // John Doe
 
-console.log(person[1]) // 150
+console.log(person[1]); // 150
 
-console.log(person[2]) // Blue
+console.log(person[2]); // Blue
 ```
 
 Ok, now lets print a sentence with our person in it like we might do on a webpage, maybe a profile.
 
 ```js
-const person = ["John Doe", 150, "Blue"]
+const person = ["John Doe", 150, "Blue"];
 
-console.log("The great" + person[0] + ", with striking " + person[2] + " eyes, was a spry " + person[1] + " years old.")
+console.log("The great" + person[0] + ", with striking " + person[2] + " eyes, was a spry " + person[1] + " years old.");
 ```
 
 There are other qualities we might want to add to describe our person like maybe species, number of legs, and number of arms.  We could do…
 
 ```js
-const person = ["John Doe", 150, "Blue", "Human", 2, 2]
+const person = ["John Doe", 150, "Blue", "Human", 2, 2];
  ```
 
 Ok, now lets print a sentence with our person in it like we might do on a webpage again.
 
 ```js
-const person = ["John Doe", 150, "Blue", "Human", 2, 2]
+const person = ["John Doe", 150, "Blue", "Human", 2, 2];
 
-console.log("The great" + person[0] + ", with striking " + person[2] + " eyes, was a spry " + person[1] + " years old. A " + person[3] + "with " + person[4) + "legs and " + person[5] + " arms.")
+console.log("The great" + person[0] + ", with striking " + person[2] + " eyes, was a spry " + person[1] + " years old. A " + person[3] + "with " + person[4) + "legs and " + person[5] + " arms.");
 ```
 
 Yikes, that doesn’t look very readable.  It seems like we should use an object to organize our data better.  Let’s create a person object and we might as well also separate the first and last name too.
 
 ```js
 const person = {
-     species: "human",
-     legs: 2,
-     arms: 2,
-     firstName: "John",
-     lastName: "Doe",
-     age: 150,
-     eyeColor: "Blue"
+  species: "human",
+  legs: 2,
+  arms: 2,
+  firstName: "John",
+  lastName: "Doe",
+  age: 150,
+  eyeColor: "Blue"
 };
 ```
 
@@ -100,13 +100,13 @@ What if we want two different people.  We could do
 
 ```js
 const person2 = {
-     species: "human",
-     legs: 2,
-     arms: 2,
-     firstName: "Jane",
-     lastName: "Doe",
-     age: 120,
-     eyeColor: "Green"
+  species: "human",
+  legs: 2,
+  arms: 2,
+  firstName: "Jane",
+  lastName: "Doe",
+  age: 120,
+  eyeColor: "Green"
 };
 
 ```
@@ -115,22 +115,22 @@ Now when we write our sentence again, it is much easier to read!
 
 ```js
 const person = {
-     species: "human",
-     legs: 2,
-     arms: 2,
-     firstName: "John",
-     lastName: "Doe",
-     age: 150,
-     eyeColor: "Blue"
+  species: "human",
+  legs: 2,
+  arms: 2,
+  firstName: "John",
+  lastName: "Doe",
+  age: 150,
+  eyeColor: "Blue"
 };
 
-console.log("The great" + person.firstName + " " + person.lastName + ", with striking " + person.eyeColor + " eyes, was a spry " + person.age + " years old. A " + person.species + "with " + person.legs + "legs and " + person.arms + " arms.")
+console.log("The great" + person.firstName + " " + person.lastName + ", with striking " + person.eyeColor + " eyes, was a spry " + person.age + " years old. A " + person.species + "with " + person.legs + "legs and " + person.arms + " arms.");
 ```
 
 ## Objects
 
 ```js
-const dictionary = {}
+const dictionary = {};
 ```
 
 ### Demo: Objects
@@ -140,26 +140,26 @@ an [Object](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Ba
 
 ```js
 // Create an empty object literal
-const emptyDictionary = {}
+const emptyDictionary = {};
 
 // Create an object literal with values
 const car = {
   make: 'Ford',
   model: 'Mustang',
   year: 1999
-}
+};
 
 // Read value from an Object, use key
-car['make'] // 'Ford'
-car.make // 'Ford'
+car['make']; // 'Ford'
+car.make; // 'Ford'
 
 // Update value in an Object, use key
-car.make = 'Toyota'
-car // { make: 'Toyota', model: 'Mustang', year: 1999 }
+car.make = 'Toyota';
+car; // { make: 'Toyota', model: 'Mustang', year: 1999 }
 
 // Add value to an Object, use key
-car.topSpeed = 120
-car // { make: 'Toyota', model: 'Mustang', year: 1999, topSpeed: 120 }
+car.topSpeed = 120;
+car; // { make: 'Toyota', model: 'Mustang', year: 1999, topSpeed: 120 }
 ```
 
 ### Code Along: Iterating through an Object
@@ -169,16 +169,16 @@ const car = {
   make: 'Ford',
   model: 'Mustang',
   year: 1999
-}
+};
 
 // Individually print message for each property of object
-console.log(car.make)
-console.log(car.model)
-console.log(car['year'])
+console.log(car.make);
+console.log(car.model);
+console.log(car['year']);
 
 // Loop through object using key
 for (const key in car){
-  console.log(car[key])
+  console.log(car[key]);
 }
 ```
 
@@ -216,10 +216,10 @@ const car = {
   drive: function(distance) {
     return "Vroooom! We drove " + distance + " miles";
   }
-}
+};
 
-car.make // 'Ford'
-car.drive(20) // 'Vroooom! We drove 20 miles"
+car.make; // 'Ford'
+car.drive(20); // 'Vroooom! We drove 20 miles"
 ```
 
 ## Abstraction and Modeling
@@ -312,7 +312,7 @@ things, such as lists of similar items, are typically modeled by arrays; since
 the items are all similar, an index is sufficient to distinguish them.
 
 ```js
-const crayons = ['blue', 'green', 'orange', 'yellow']
+const crayons = ['blue', 'green', 'orange', 'yellow'];
 ```
 
 - Note that we're also abstracting away each crayon as a String - at the
@@ -335,9 +335,9 @@ const crayon = {
   color: 'blue',
   lengthInCM: 8,
   getUsedUp: function () {
-    crayon.lengthInCM -= 0.5
+    crayon.lengthInCM -= 0.5;
   }
-}
+};
 ```
 
 As you can see, `crayon` has two ordinary traits, (which we call properties),
@@ -377,9 +377,9 @@ const car = {
   releaseYear: 1992,
   mileage: 78062,
   addMileage: function () {
-    car.mileage += 50
+    car.mileage += 50;
   }
-}
+};
 ```
 
 ### Code Along: Television
@@ -476,8 +476,8 @@ Watch as I demonstrate how to complete writing each method.
 
 ```js
 const user = {
-  name: 'Christopher Robin',
-  email: 'wdi@christopherRobin.com',
+  name: 'John Doe',
+  email: 'sei@johndoe.com',
   address: 'home',
   runs: [
     {
@@ -494,7 +494,7 @@ const user = {
   totalDistance: function () {},
   longestRunDistance: function () {},
   averageSpeed: function () {}
-}
+};
 ```
 
 ## Lab: Self-Referential Objects
